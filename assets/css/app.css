@@ -66,7 +66,7 @@ body {
 }
 
 .section {
-    padding: 84px 0;
+    padding: 28px 0;
 }
 
 .section.alt {
@@ -204,7 +204,7 @@ body {
 
 /* Hero */
 .hero {
-    padding-top: 64px;
+    padding-top: 28px;
 }
 
 .hero-grid {
