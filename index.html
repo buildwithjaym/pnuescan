@@ -4,20 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" href="assets/img/Pnue.png" />
-  <title>PneuScan AI — Predictive Lung Cancer Risk Intelligence</title>
-  <meta name="description" content="PneuScan AI analyzes routine chest X-rays to estimate short-term (1–3 year) lung cancer risk and support earlier screening decisions." />
-
-  <link rel="stylesheet" href="/assets/css/app.css" />
+  <title>PneuScan AI | Predictive Lung Cancer Risk Intelligence</title>
+  <meta name="description" content="PneuScan AI analyzes routine chest X-rays to estimate short-term (1 to 3 year) lung cancer risk and support earlier screening decisions." />
+  <link rel="stylesheet" href="assets/css/app.css" />
 </head>
 <body>
-  <!-- Skip link (accessibility) -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header / Nav -->
   <header class="site-header" id="top">
     <nav class="nav">
       <a class="brand" href="#top" aria-label="PneuScan AI Home">
-        <img class="brand-mark" src="/assets/img/Pnue.png" alt="PneuScan AI icon" />
+        <img class="brand-mark" src="assets/img/Pnue.png" alt="PneuScan AI icon" />
         <span class="brand-text">PneuScan <span class="brand-ai">AI</span></span>
       </a>
 
@@ -31,22 +28,22 @@
         <a class="nav-link" href="#features">Features</a>
         <a class="nav-link" href="#how">How it works</a>
         <a class="nav-link" href="#trust">Trust</a>
-        <a class="nav-link" href="#about">About Us</a>
+        <a class="nav-link" href="#about">About</a>
         <a class="nav-link nav-cta" href="#cta">Request demo</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="pill">Predictive Risk Intelligence • Chest X-ray First</p>
-          <h1>Turn routine chest X-rays into <span class="accent">1–3 year lung cancer risk</span> insights.</h1>
+          <p class="pill">Predictive Risk Intelligence | Chest X-ray First</p>
+          <h1>Turn routine chest X-rays into <span class="accent">1 to 3 year lung cancer risk</span> insights.</h1>
           <p class="lead">
-            PneuScan AI supports clinicians by estimating short-term lung cancer risk from everyday chest X-rays —
-            enabling earlier screening prioritization without adding new imaging workflows.
+            PneuScan AI is a clinical decision support tool that estimates near-term lung cancer risk from everyday chest X-rays.
+            It helps healthcare teams prioritize follow-up screening with minimal workflow disruption.
           </p>
 
           <div class="hero-actions">
@@ -56,45 +53,62 @@
 
           <div class="hero-badges">
             <div class="badge">
-              <span class="badge-title">Built for scale</span>
-              <span class="badge-text">Designed to run on high-volume X-ray workflows</span>
+              <span class="badge-title">Made for scale</span>
+              <span class="badge-text">Designed to run on high-volume imaging workflows</span>
             </div>
             <div class="badge">
-              <span class="badge-title">Workflow-first</span>
-              <span class="badge-text">Risk report + explainability overlay</span>
+              <span class="badge-title">Trust focused</span>
+              <span class="badge-text">Risk band, explainability overlay, and report summary</span>
             </div>
           </div>
         </div>
 
         <div class="hero-card reveal">
-          <div class="card">
+          <div class="card card-scan">
+            <div class="scan-line" aria-hidden="true"></div>
+            <div class="scan-grid" aria-hidden="true"></div>
+
             <div class="card-top">
               <div class="card-icon">
-                <img src="/assets/img/Pnue.png" alt="" />
+                <img src="assets/img/Pnue.png" alt="" />
               </div>
               <div>
-                <p class="card-label">Sample Output</p>
-                <p class="card-title">Risk Stratification Report</p>
+                <p class="card-label">Interactive preview</p>
+                <p class="card-title">Risk Stratification Output</p>
               </div>
             </div>
 
             <div class="card-body">
               <div class="metric">
-                <span class="metric-label">Estimated 1–3 yr risk band</span>
-                <span class="metric-value">Elevated</span>
+                <span class="metric-label">Estimated risk band</span>
+                <span class="metric-value" id="riskLabel">Moderate</span>
               </div>
+
               <div class="meter" aria-hidden="true">
-                <span class="meter-bar"></span>
+                <span class="meter-bar" id="riskBar"></span>
+              </div>
+
+              <div class="demo">
+                <div class="demo-row">
+                  <label class="demo-label" for="riskRange">Simulate risk level</label>
+                  <span class="demo-value" id="riskPct">42%</span>
+                </div>
+
+                <input id="riskRange" class="range" type="range" min="1" max="100" value="42" />
+
+                <p class="demo-note" id="riskNote">
+                  Moderate risk suggests closer follow-up based on clinical criteria.
+                </p>
               </div>
 
               <ul class="card-list">
-                <li>AI risk score (banded + probability range)</li>
-                <li>Explainability heatmap overlay</li>
-                <li>Suggested next-step screening pathway</li>
+                <li>Risk band plus probability range</li>
+                <li>Explainability overlay for clinician review</li>
+                <li>Suggested follow-up pathway</li>
               </ul>
 
               <p class="card-note">
-                *Illustrative UI only. PneuScan AI supports clinical decision-making and does not replace medical evaluation.
+                Disclaimer: This is a demo UI. PneuScan AI supports clinical decision-making and does not diagnose disease.
               </p>
             </div>
           </div>
@@ -102,185 +116,321 @@
       </div>
     </section>
 
-    <!-- What we do -->
+    <!-- WHAT -->
     <section id="what" class="section">
       <div class="container">
         <div class="section-head reveal">
           <h2>What we do</h2>
           <p>
-            PneuScan AI adds a predictive layer to routine chest X-rays — helping health systems identify elevated-risk
-            patients earlier and prioritize follow-up screening.
+            PneuScan AI adds predictive risk intelligence to routine chest X-rays so health systems can identify elevated-risk patients earlier
+            and prioritize screening resources more effectively.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="feature-card reveal">
-            <h3>Predict, don’t diagnose</h3>
-            <p>We estimate short-term risk (1–3 years) to support screening decisions — not to confirm cancer.</p>
+            <h3>Risk stratification</h3>
+            <p>Estimates near-term risk to support screening decisions and care pathways.</p>
           </article>
 
           <article class="feature-card reveal">
             <h3>Opportunistic screening</h3>
-            <p>Uses X-rays that already happen daily (ER, checkups, clearances) — no extra scan required.</p>
+            <p>Uses X-rays already taken daily for checkups, clearances, and urgent care workflows.</p>
           </article>
 
           <article class="feature-card reveal">
-            <h3>Clinical workflow fit</h3>
-            <p>Outputs a structured report and explainability overlay that can be reviewed by professionals.</p>
+            <h3>Workflow ready output</h3>
+            <p>Generates a clean report summary designed for clinical review and pilot deployment.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Features -->
+    <!-- FEATURES -->
     <section id="features" class="section alt">
       <div class="container">
         <div class="section-head reveal">
           <h2>Key features</h2>
-          <p>Designed for adoption: fast, interpretable, and built around real clinical workflows.</p>
+          <p>
+            Built for real adoption with clear outputs, quality handling, and workflow-ready reporting.
+          </p>
         </div>
 
-        <div class="grid-2">
+        <div class="feature-highlights">
+          <article class="highlight-card reveal">
+            <div class="highlight-top">
+              <span class="kicker">Core Output</span>
+              <h3>Short-term risk band</h3>
+            </div>
+            <p>
+              Converts routine chest X-rays into a 1 to 3 year risk band with a probability range to support decision-making.
+            </p>
+            <ul class="mini">
+              <li>Low, Moderate, Elevated categories</li>
+              <li>Probability range for context</li>
+              <li>Next-step suggestion for screening</li>
+            </ul>
+          </article>
+
+          <article class="highlight-card reveal">
+            <div class="highlight-top">
+              <span class="kicker">Trust Layer</span>
+              <h3>Explainability overlay</h3>
+            </div>
+            <p>
+              Provides an interpretable overlay highlighting regions that influenced the model score for clinical review.
+            </p>
+            <ul class="mini">
+              <li>Visual contribution map</li>
+              <li>Report rationale summary</li>
+              <li>Audit-friendly traceability</li>
+            </ul>
+          </article>
+
+          <article class="highlight-card reveal">
+            <div class="highlight-top">
+              <span class="kicker">Deployment</span>
+              <h3>Workflow-ready report</h3>
+            </div>
+            <p>
+              Outputs a clean one-page report designed to fit clinical workflows and enable validation pilots.
+            </p>
+            <ul class="mini">
+              <li>Clear risk statement</li>
+              <li>Follow-up guidance language</li>
+              <li>Professional format</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid-2 feature-grid">
           <div class="list-card reveal">
-            <h3>Risk scoring & prioritization</h3>
+            <h3>Quality-aware preprocessing</h3>
+            <p class="muted">
+              Standardizes noisy real-world X-rays to reduce variability across different machines and settings.
+            </p>
             <ul class="checklist">
-              <li>Short-term risk band (Low / Moderate / Elevated)</li>
-              <li>Probability range + confidence indicators</li>
-              <li>Suggested follow-up screening action</li>
+              <li>Normalization and contrast standardization</li>
+              <li>Lung region focus to reduce distractions</li>
+              <li>Quality flags for low-quality inputs</li>
             </ul>
           </div>
 
           <div class="list-card reveal">
-            <h3>Explainability for trust</h3>
+            <h3>Clinical safety and governance</h3>
+            <p class="muted">
+              Designed as decision support with guardrails and traceability to support responsible deployment.
+            </p>
             <ul class="checklist">
-              <li>Heatmap overlay showing contributing regions</li>
-              <li>Clear report summary for clinicians</li>
-              <li>Audit trail (model version, timestamp)</li>
+              <li>Risk stratification only, not diagnosis</li>
+              <li>Model version and timestamp support</li>
+              <li>Validation and audit readiness</li>
             </ul>
           </div>
 
           <div class="list-card reveal">
-            <h3>Integration-ready</h3>
+            <h3>High-volume readiness</h3>
+            <p class="muted">
+              Built for settings where imaging volume is high and staff time is limited.
+            </p>
             <ul class="checklist">
-              <li>Designed for PACS / radiology pipelines (Phase 1)</li>
-              <li>Secure upload + standardized preprocessing</li>
-              <li>Scalable inference for high-volume centers</li>
+              <li>Fast inference design approach</li>
+              <li>Report output to reduce extra steps</li>
+              <li>Deployment-friendly architecture</li>
             </ul>
           </div>
 
           <div class="list-card reveal">
-            <h3>Global scalability</h3>
+            <h3>Roadmap: CT refinement module</h3>
+            <p class="muted">
+              When CT is available, PneuScan can refine risk and support follow-up monitoring for flagged patients.
+            </p>
             <ul class="checklist">
-              <li>X-ray-first approach for broad accessibility</li>
-              <li>Works with diverse imaging sources</li>
-              <li>Future expansion: CT refinement module</li>
+              <li>CT refinement for higher resolution review</li>
+              <li>Follow-up comparison over time</li>
+              <li>Stronger clinical decision support</li>
             </ul>
+          </div>
+        </div>
+
+        <div class="stats reveal" data-counters>
+          <div class="stat">
+            <div class="stat-num" data-count="1">0</div>
+            <div class="stat-label">Primary modality for Phase 1</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-label">Risk horizon target in years</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="0">0</div>
+            <div class="stat-label">Extra scans required for scoring</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How it works -->
+    <!-- HOW -->
     <section id="how" class="section">
       <div class="container">
         <div class="section-head reveal">
           <h2>How it works</h2>
-          <p>Simple and workflow-friendly — built for real deployment.</p>
+          <p>Click a step to focus it. This is designed for simple clinical deployment workflows.</p>
         </div>
 
-        <div class="steps">
-          <div class="step reveal">
+        <div class="steps" id="steps">
+          <button class="step reveal step-btn is-active" type="button" data-step="1">
             <div class="step-num">1</div>
             <div class="step-body">
               <h3>Ingest routine chest X-ray</h3>
-              <p>From clinical workflow or secure upload — standardized for consistent analysis.</p>
+              <p>From a clinical workflow or secure upload with standardized preprocessing.</p>
             </div>
-          </div>
+          </button>
 
-          <div class="step reveal">
+          <button class="step reveal step-btn" type="button" data-step="2">
             <div class="step-num">2</div>
             <div class="step-body">
               <h3>AI risk analysis</h3>
-              <p>Model evaluates subtle patterns correlated with near-term risk (1–3 years).</p>
+              <p>Model evaluates imaging patterns correlated with near-term risk.</p>
             </div>
-          </div>
+          </button>
 
-          <div class="step reveal">
+          <button class="step reveal step-btn" type="button" data-step="3">
             <div class="step-num">3</div>
             <div class="step-body">
-              <h3>Risk report + next-step guidance</h3>
-              <p>Outputs risk band, explainability overlay, and suggested screening pathway for review.</p>
+              <h3>Report for clinical review</h3>
+              <p>Risk band, overlay, and suggested next step for clinician decision-making.</p>
             </div>
-          </div>
+          </button>
         </div>
 
-        <div class="callout reveal">
+        <div class="callout reveal" id="howCallout">
           <strong>Important:</strong> PneuScan AI supports decision-making and does not replace clinical judgment.
         </div>
       </div>
     </section>
 
-    <!-- Trust -->
+    <!-- TRUST -->
     <section id="trust" class="section alt">
       <div class="container">
         <div class="section-head reveal">
           <h2>Built for trust</h2>
-          <p>Medical AI must be responsible. We design for safety, transparency, and adoption.</p>
+          <p>Medical AI must be responsible, transparent, and designed for clinical adoption.</p>
         </div>
 
         <div class="grid-3">
           <article class="feature-card reveal">
-            <h3>Responsible messaging</h3>
-            <p>Risk stratification — not diagnosis. Outputs are designed to encourage appropriate follow-up.</p>
+            <h3>Responsible outputs</h3>
+            <p>Risk-focused reporting designed to support appropriate follow-up decisions.</p>
           </article>
 
           <article class="feature-card reveal">
             <h3>Explainability first</h3>
-            <p>Clinicians can review what influenced the model, improving confidence and oversight.</p>
+            <p>Clinicians can review what contributed to the estimate and interpret results more confidently.</p>
           </article>
 
           <article class="feature-card reveal">
-            <h3>Scalable validation path</h3>
-            <p>Retrospective validation → external validation → clinical pilots → broader deployment.</p>
+            <h3>Validation pathway</h3>
+            <p>Designed for retrospective validation, external testing, and pilot studies in real settings.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Abotu uS-->
-    <section id="about" class="section alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>About Us</h2>
-          <p>We are a 3rd Year BS Computer Science Student who wants to build a predictive model that can analyze chest X-rays and estimate the risk of lung cancer within 1 to 3 years. Our goal is to support earlier screening decisions and improve patient outcomes by providing actionable insights from routine imaging.</p>
-        </div>
+    <!-- About Us -->
+<section id="about" class="section alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>About Us</h2>
+      <p>
+        We are third-year BS Computer Science students building PneuScan AI, a predictive risk intelligence tool that analyzes chest X-rays
+        and estimates the likelihood of lung cancer risk within 1 to 3 years. Our goal is to support earlier screening decisions by turning
+        routine imaging into actionable, clinician-friendly insights.
+      </p>
+    </div>
 
-        <div class="grid-3">
-          <article class="feature-card reveal">
-            <h3>Jaymar H. Maruji</h3>
-            <p>Founder & CEO, PneuScan AI.</p>
-          </article>
+    <div class="about-grid">
+      <!-- Mission Card -->
+      <div class="about-card reveal">
+        <h3>Our mission</h3>
+        <p>
+          Help healthcare teams identify elevated-risk patients earlier, prioritize follow-up screening, and reduce late-stage lung cancer outcomes
+          through accessible and workflow-ready AI.
+        </p>
 
-          <article class="feature-card reveal">
-            <h3>Bradnil S. Tumalon</h3>
-            <p>Lead Developer, PneuScan AI.</p>
-          </article>
+        <div class="about-pills">
+          <span class="tag">Chest X-ray first</span>
+          <span class="tag">1 to 3 year risk horizon</span>
+          <span class="tag">Decision support</span>
         </div>
       </div>
-    </section>
+
+      <!-- Team Cards -->
+      <div class="team-grid">
+        <article class="team-card reveal">
+          <div class="team-top">
+            <div class="avatar">
+            <img src="assets/img/jaymar.jpg" alt="Jaymar H. Maruji" />
+            </div>
+
+            <div class="team-meta">
+              <h3 class="team-name">Jaymar H. Maruji</h3>
+              <p class="team-role">Founder and Product Lead</p>
+            </div>
+          </div>
+
+          <p class="team-bio">
+            Focused on building a practical medical AI product that fits real clinical workflows, prioritizes trust, and delivers measurable impact.
+          </p>
+
+          <ul class="team-points">
+            <li>Vision and roadmap</li>
+            <li>Model direction and validation planning</li>
+            <li>Product and clinical workflow design</li>
+          </ul>
+        </article>
+
+        <article class="team-card reveal">
+          <div class="team-top">
+            <div class="avatar">
+              <img src="assets/img/bradnil.jpg" alt="Bradnil S. Tumalon" />
+            
+            </div>
+
+            <div class="team-meta">
+              <h3 class="team-name">Bradnil S. Tumalon</h3>
+              <p class="team-role">Lead Developer and Engineering</p>
+            </div>
+          </div>
+
+          <p class="team-bio">
+            Builds the platform foundation for secure uploads, model inference flow, and a clean UI that communicates results clearly.
+          </p>
+
+          <ul class="team-points">
+            <li>Web experience and UI engineering</li>
+            <li>Model integration and deployment</li>
+            <li>Data pipeline and system reliability</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- CTA -->
     <section id="cta" class="section">
       <div class="container cta reveal">
         <div>
           <h2>Request a clinical demo</h2>
-          <p>Showcase PneuScan AI inside a workflow-style interface with sample reports and integration paths.</p>
+          <p>Get a pilot-ready walkthrough of the risk report experience, integration approach, and validation roadmap.</p>
         </div>
 
         <form class="cta-form" action="#" method="post" onsubmit="return false;">
           <label class="sr-only" for="email">Email</label>
           <input id="email" type="email" placeholder="your@email.com" autocomplete="email" />
-          <button class="btn btn-primary" type="submit">Get in touch</button>
-          <p class="tiny">We’ll reply with a demo deck + pilot discussion steps.</p>
+          <button class="btn btn-primary" type="submit" id="ctaBtn">Get in touch</button>
+          <p class="tiny" id="ctaHint">We will reply with a demo deck and pilot discussion steps.</p>
         </form>
       </div>
     </section>
@@ -289,7 +439,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="/assets/img/Pnue.png" alt="PneuScan AI icon" />
+        <img src="assets/img/Pnue.png" alt="PneuScan AI icon" />
         <div>
           <p class="footer-title">PneuScan AI</p>
           <p class="footer-sub">Predictive lung cancer risk intelligence from routine chest X-rays.</p>
